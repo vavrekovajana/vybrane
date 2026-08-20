@@ -19,39 +19,48 @@ body{
 .wrap{
   max-width:760px;
   margin:auto;
-  padding:12px;
+  padding:5px;
 }
 
 .logo{
   text-align:center;
-  font-size:42px;
+  font-size:30px;
   font-weight:900;
-  margin:2px;
+  line-height:1;
+  margin:0;
 }
 
-.logo span{color:#ff9f1c}
+.logo span{
+  color:#ff9f1c;
+}
 
 .slogan{
   text-align:center;
   color:#718096;
   font-weight:700;
-  margin-bottom:10px;
+  font-size:11px;
+  margin:2px 0 5px;
 }
 
 .card{
   background:white;
-  border-radius:24px;
-  padding:20px;
-  box-shadow:0 15px 40px rgba(23,54,93,.12);
+  border-radius:20px;
+  padding:10px;
+  box-shadow:0 10px 28px rgba(23,54,93,.12);
 }
 
-.center{text-align:center}
-.hidden{display:none!important}
+.center{
+  text-align:center;
+}
+
+.hidden{
+  display:none!important;
+}
 
 .levels{
   display:grid;
-  gap:8px;
-  margin:14px 0;
+  gap:5px;
+  margin:8px 0;
 }
 
 button{
@@ -82,7 +91,7 @@ button{
 
 .mistakes{
   width:100%;
-  margin-top:8px;
+  margin-top:5px;
   background:#fff4df;
   color:#805400;
 }
@@ -92,10 +101,26 @@ button{
   color:#17365d;
 }
 
+.allExercises{
+  background:#fff4df;
+  color:#805400;
+}
+
+.allExercisesHome{
+  width:100%;
+  margin-top:5px;
+}
+
 .top{
   display:flex;
   justify-content:space-between;
   align-items:center;
+}
+
+.navButtons{
+  display:flex;
+  gap:5px;
+  flex-wrap:wrap;
 }
 
 .badge{
@@ -106,11 +131,11 @@ button{
 }
 
 .progress{
-  height:9px;
+  height:6px;
   background:#e9eff5;
   border-radius:20px;
   overflow:hidden;
-  margin:8px 0;
+  margin:5px 0;
 }
 
 .bar{
@@ -128,40 +153,43 @@ button{
 }
 
 .instruction{
-  margin-top:9px;
+  margin-top:5px;
   color:#65758b;
-  font-weight:700;
-  font-size:15px;
+  font-weight:800;
+  font-size:14px;
+  text-align:center;
 }
 
 .context{
   text-align:center;
   background:#f5f9ff;
-  border-radius:14px;
-  padding:8px 12px;
-  margin-top:8px;
-  font-size:17px;
+  border-radius:12px;
+  padding:6px 8px;
+  margin-top:5px;
+  font-size:14px;
   font-weight:700;
   color:#37536f;
 }
 
 .question{
   text-align:center;
-  font-size:31px;
+  font-size:28px;
   font-weight:900;
-  margin:11px 0;
+  margin:6px 0;
+  line-height:1.15;
 }
 
 .answers{
   display:grid;
-  gap:7px;
+  grid-template-columns:repeat(2,1fr);
+  gap:5px;
 }
 
 .answer{
   background:white;
   border:2px solid #dce7f2;
   color:#17365d;
-  padding:10px;
+  padding:7px;
 }
 
 .answer:hover{
@@ -169,11 +197,17 @@ button{
   background:#f5f9ff;
 }
 
+.answer.keyboardSelected{
+  border-color:#2f80ed;
+  background:#eaf3ff;
+  box-shadow:0 0 0 2px rgba(47,128,237,.12);
+}
+
 .feedback{
-  margin-top:7px;
-  padding:8px 11px;
-  border-radius:14px;
-  font-size:15px;
+  margin-top:5px;
+  padding:5px 7px;
+  border-radius:10px;
+  font-size:12px;
 }
 
 .good{
@@ -187,45 +221,83 @@ button{
 }
 
 .score{
-  font-size:50px;
+  font-size:44px;
   font-weight:900;
-  margin:12px;
+  margin:5px;
 }
 
 .footer{
   text-align:center;
   color:#8795a7;
-  font-size:12px;
-  margin-top:8px;
+  font-size:10px;
+  margin-top:3px;
 }
 
 #next{
-  margin-top:7px!important;
-  padding:9px;
+  margin-top:5px!important;
+  padding:7px;
 }
 
-/* HRA SA ZMESTÍ NA OBRAZOVKU PC/NOTEBOOKU */
+.finishButtons{
+  display:flex;
+  gap:5px;
+  margin-top:6px;
+}
+
+.finishButtons button{
+  flex:1;
+}
+
 @media(min-width:521px){
+
   #game{
-    padding:16px 20px;
+    padding:8px 10px;
   }
 
   #game .question{
-    margin:9px 0;
+    margin:5px 0;
   }
 
   #game .answer{
-    padding:9px;
+    padding:7px;
   }
 }
 
-/* MOBIL */
 @media(max-width:520px){
-  .wrap{padding:8px}
-  .card{padding:15px 12px}
-  .logo{font-size:36px}
-  .question{font-size:27px}
-  .context{font-size:15px}
+
+  .wrap{
+    padding:4px;
+  }
+
+  .card{
+    padding:8px;
+  }
+
+  .logo{
+    font-size:27px;
+  }
+
+  .question{
+    font-size:24px;
+  }
+
+  .context{
+    font-size:13px;
+  }
+
+  .answers{
+    grid-template-columns:1fr;
+  }
+
+  .navButtons button{
+    font-size:10px;
+    padding:5px;
+  }
+
+  .badge{
+    font-size:10px;
+    padding:5px 7px;
+  }
 }
 </style>
 </head>
@@ -234,14 +306,22 @@ button{
 
 <div class="wrap">
 
-<div class="logo">Dám<span>To!</span></div>
-<div class="slogan">Každý deň o level vyššie.</div>
+<div class="logo">
+Dám<span>To!</span>
+</div>
+
+<div class="slogan">
+Každý deň o level vyššie.
+</div>
+
 
 <!-- DOMOV -->
 
 <section id="home" class="card center">
 
-  <div style="font-size:42px">🐝</div>
+  <div style="font-size:42px">
+    🐝
+  </div>
 
   <h1 style="margin:6px 0">
     Vybrané slová po B
@@ -256,21 +336,24 @@ button{
     <button
       class="level active"
       onclick="chooseLevel(1,this)">
-      ⭐ Skúšam<br>
+      ⭐ Skúšam
+      <br>
       <small>Doplň správne i / y</small>
     </button>
 
     <button
       class="level"
       onclick="chooseLevel(2,this)">
-      ⭐⭐ Už mi to ide<br>
+      ⭐⭐ Už mi to ide
+      <br>
       <small>Vyber správne slovo podľa významu</small>
     </button>
 
     <button
       class="level"
       onclick="chooseLevel(3,this)">
-      ⭐⭐⭐ DámTo!<br>
+      ⭐⭐⭐ DámTo!
+      <br>
       <small>Lovec chýb – správna veta</small>
     </button>
 
@@ -289,6 +372,12 @@ button{
     <span id="mistakeCount"></span>
   </button>
 
+  <button
+    id="allExercisesHomeBtn"
+    class="allExercises allExercisesHome">
+    🏠 Všetky cvičenia
+  </button>
+
 </section>
 
 
@@ -298,11 +387,21 @@ button{
 
   <div class="top">
 
-    <button
-      class="secondary"
-      onclick="goHome()">
-      ← Späť
-    </button>
+    <div class="navButtons">
+
+      <button
+        class="secondary"
+        onclick="goHome()">
+        ← Späť
+      </button>
+
+      <button
+        id="allExercisesBtn"
+        class="allExercises">
+        🏠 Všetky cvičenia
+      </button>
+
+    </div>
 
     <div
       id="levelBadge"
@@ -312,12 +411,21 @@ button{
   </div>
 
   <div class="progress">
-    <div id="bar" class="bar"></div>
+    <div
+      id="bar"
+      class="bar">
+    </div>
   </div>
 
   <div class="stats">
+
     <span id="counter"></span>
-    <span>🏆 <span id="points">0</span></span>
+
+    <span>
+      🏆
+      <span id="points">0</span>
+    </span>
+
   </div>
 
   <div
@@ -358,9 +466,13 @@ button{
   id="finish"
   class="card center hidden">
 
-  <div style="font-size:55px">🏆</div>
+  <div style="font-size:55px">
+    🏆
+  </div>
 
-  <h1>Tréning hotový!</h1>
+  <h1>
+    Tréning hotový!
+  </h1>
 
   <div
     id="finalScore"
@@ -375,13 +487,21 @@ button{
     🔄 Nový náhodný mix
   </button>
 
-  <br><br>
+  <div class="finishButtons">
 
-  <button
-    class="secondary"
-    onclick="goHome()">
-    ⭐ Vybrať level
-  </button>
+    <button
+      class="secondary"
+      onclick="goHome()">
+      ⭐ Vybrať level
+    </button>
+
+    <button
+      id="allExercisesFinishBtn"
+      class="allExercises">
+      🏠 Všetky cvičenia
+    </button>
+
+  </div>
 
 </section>
 
@@ -395,10 +515,25 @@ button{
 <script>
 
 /* =====================================================
+   VŠETKY CVIČENIA
+===================================================== */
+
+const ALL_EXERCISES_URL =
+"https://sites.google.com/view/vyssilevel/d%C3%A1mto-online-cvi%C4%8Denia";
+
+function goToAllExercises(){
+
+  window.top.location.href=
+    ALL_EXERCISES_URL;
+}
+
+
+/* =====================================================
    DATABÁZA
 ===================================================== */
 
 const database=[
+
 
 /* ================= Y / Ý ================= */
 
@@ -809,6 +944,7 @@ let questions=[];
 let current=0;
 let score=0;
 let locked=false;
+let selectedAnswerIndex=0;
 
 
 /* =====================================================
@@ -825,7 +961,8 @@ function shuffle(a){
       Math.random()*(i+1)
     );
 
-    [a[i],a[j]]=[a[j],a[i]];
+    [a[i],a[j]]=
+      [a[j],a[i]];
   }
 
   return a;
@@ -841,10 +978,10 @@ function chooseLevel(n,btn){
   level=n;
 
   document
-    .querySelectorAll(".level")
-    .forEach(
-      b=>b.classList.remove("active")
-    );
+  .querySelectorAll(".level")
+  .forEach(
+    b=>b.classList.remove("active")
+  );
 
   btn.classList.add("active");
 }
@@ -857,18 +994,18 @@ function chooseLevel(n,btn){
 function show(id){
 
   ["home","game","finish"]
-    .forEach(
-      x=>
-        document
-          .getElementById(x)
-          .classList
-          .add("hidden")
-    );
+  .forEach(
+    x=>
+      document
+      .getElementById(x)
+      .classList
+      .add("hidden")
+  );
 
   document
-    .getElementById(id)
-    .classList
-    .remove("hidden");
+  .getElementById(id)
+  .classList
+  .remove("hidden");
 
   window.scrollTo(0,0);
 }
@@ -886,10 +1023,10 @@ function getMistakes(){
       localStorage.getItem("damtoB") || "{}"
     );
 
-  }catch(e){
+  }
+  catch(e){
 
     return {};
-
   }
 }
 
@@ -924,6 +1061,7 @@ function correctAnswer(id){
     m[id]--;
 
     if(m[id]<=0){
+
       delete m[id];
     }
 
@@ -940,9 +1078,9 @@ function updateMistakes(){
     ).length;
 
   document
-    .getElementById("mistakeCount")
-    .textContent=
-      n ? "("+n+")" : "";
+  .getElementById("mistakeCount")
+  .textContent=
+    n ? "("+n+")" : "";
 }
 
 
@@ -952,7 +1090,8 @@ function updateMistakes(){
 
 function buildDeck(){
 
-  let m=getMistakes();
+  let m=
+    getMistakes();
 
   let yWords=
     database.filter(
@@ -969,26 +1108,41 @@ function buildDeck(){
     );
 
   yWords=[
+
     ...shuffle(
-      yWords.filter(x=>m[x.id])
+      yWords.filter(
+        x=>m[x.id]
+      )
     ),
+
     ...shuffle(
-      yWords.filter(x=>!m[x.id])
+      yWords.filter(
+        x=>!m[x.id]
+      )
     )
   ];
 
   iWords=[
+
     ...shuffle(
-      iWords.filter(x=>m[x.id])
+      iWords.filter(
+        x=>m[x.id]
+      )
     ),
+
     ...shuffle(
-      iWords.filter(x=>!m[x.id])
+      iWords.filter(
+        x=>!m[x.id]
+      )
     )
   ];
 
   return shuffle([
+
     ...yWords.slice(0,5),
+
     ...iWords.slice(0,5)
+
   ]);
 }
 
@@ -999,9 +1153,11 @@ function buildDeck(){
 
 function startTraining(){
 
-  questions=buildDeck();
+  questions=
+    buildDeck();
 
   current=0;
+
   score=0;
 
   show("game");
@@ -1016,7 +1172,8 @@ function startTraining(){
 
 function startMistakes(){
 
-  let m=getMistakes();
+  let m=
+    getMistakes();
 
   let list=
     database.filter(
@@ -1034,9 +1191,10 @@ function startMistakes(){
 
   questions=
     shuffle(list)
-      .slice(0,10);
+    .slice(0,10);
 
   current=0;
+
   score=0;
 
   show("game");
@@ -1057,6 +1215,36 @@ function goHome(){
 }
 
 
+document
+.getElementById(
+  "allExercisesHomeBtn"
+)
+.addEventListener(
+  "click",
+  goToAllExercises
+);
+
+
+document
+.getElementById(
+  "allExercisesBtn"
+)
+.addEventListener(
+  "click",
+  goToAllExercises
+);
+
+
+document
+.getElementById(
+  "allExercisesFinishBtn"
+)
+.addEventListener(
+  "click",
+  goToAllExercises
+);
+
+
 /* =====================================================
    OTÁZKA
 ===================================================== */
@@ -1065,63 +1253,92 @@ function render(){
 
   locked=false;
 
-  if(current>=questions.length){
+  selectedAnswerIndex=0;
+
+  if(
+    current>=
+    questions.length
+  ){
 
     finish();
 
     return;
   }
 
-  let x=questions[current];
+  let x=
+    questions[current];
 
   let context=
-    document.getElementById("context");
+    document.getElementById(
+      "context"
+    );
 
   context.textContent="";
-  context.classList.add("hidden");
+
+  context.classList.add(
+    "hidden"
+  );
 
   document
-    .getElementById("counter")
-    .textContent=
-      (current+1)
-      +" / "+
-      questions.length;
+  .getElementById(
+    "counter"
+  )
+  .textContent=
+    (current+1)+
+    " / "+
+    questions.length;
 
   document
-    .getElementById("points")
-    .textContent=
-      score;
+  .getElementById(
+    "points"
+  )
+  .textContent=
+    score;
 
   document
-    .getElementById("bar")
-    .style.width=
-      (
-        current /
-        questions.length *
-        100
-      )+"%";
+  .getElementById(
+    "bar"
+  )
+  .style.width=
+    (
+      current /
+      questions.length *
+      100
+    )+
+    "%";
 
   document
-    .getElementById("feedback")
-    .innerHTML="";
+  .getElementById(
+    "feedback"
+  )
+  .innerHTML="";
 
   document
-    .getElementById("feedback")
-    .className="";
+  .getElementById(
+    "feedback"
+  )
+  .className="";
 
   document
-    .getElementById("next")
-    .classList
-    .add("hidden");
+  .getElementById(
+    "next"
+  )
+  .classList
+  .add("hidden");
 
   document
-    .getElementById("levelBadge")
-    .textContent=
-      level===1
-      ? "⭐ Skúšam"
-      : level===2
-      ? "⭐⭐ Už mi to ide"
-      : "⭐⭐⭐ DámTo!";
+  .getElementById(
+    "levelBadge"
+  )
+  .textContent=
+
+    level===1
+    ? "⭐ Skúšam"
+
+    : level===2
+    ? "⭐⭐ Už mi to ide"
+
+    : "⭐⭐⭐ DámTo!";
 
 
   /* ================= LEVEL 1 ================= */
@@ -1129,27 +1346,31 @@ function render(){
   if(level===1){
 
     document
-      .getElementById("instruction")
-      .textContent=
-        "✏️ Doplň správne písmeno";
+    .getElementById(
+      "instruction"
+    )
+    .textContent=
+      "✏️ Doplň správne písmeno";
 
-    /*
-       Pri slovách, kde sú obe podoby správne,
-       zobrazíme významový kontext.
-    */
-
-    if(x.meaningPair && x.level2context){
+    if(
+      x.meaningPair &&
+      x.level2context
+    ){
 
       context.textContent=
         x.level2context;
 
-      context.classList.remove("hidden");
+      context.classList.remove(
+        "hidden"
+      );
     }
 
     document
-      .getElementById("question")
-      .textContent=
-        x.gap;
+    .getElementById(
+      "question"
+    )
+    .textContent=
+      x.gap;
 
     let wrong=
 
@@ -1165,7 +1386,10 @@ function render(){
       : "í";
 
     createAnswers(
-      [x.correct,wrong],
+      [
+        x.correct,
+        wrong
+      ],
       x.correct
     );
   }
@@ -1178,35 +1402,49 @@ function render(){
     if(x.meaningPair){
 
       document
-        .getElementById("instruction")
-        .textContent=
-          "🧩 Vyber slovo, ktoré patrí do vety";
+      .getElementById(
+        "instruction"
+      )
+      .textContent=
+        "🧩 Vyber slovo, ktoré patrí do vety";
 
       context.textContent=
         x.level2context;
 
-      context.classList.remove("hidden");
+      context.classList.remove(
+        "hidden"
+      );
 
       document
-        .getElementById("question")
-        .textContent=
-          "Ktoré slovo doplníš?";
+      .getElementById(
+        "question"
+      )
+      .textContent=
+        "Ktoré slovo doplníš?";
 
-    }else{
-
-      document
-        .getElementById("instruction")
-        .textContent=
-          "🧩 Vyber správne napísané slovo";
+    }
+    else{
 
       document
-        .getElementById("question")
-        .textContent=
-          "Ktoré slovo je správne?";
+      .getElementById(
+        "instruction"
+      )
+      .textContent=
+        "🧩 Vyber správne napísané slovo";
+
+      document
+      .getElementById(
+        "question"
+      )
+      .textContent=
+        "Ktoré slovo je správne?";
     }
 
     createAnswers(
-      [x.word,x.wrong],
+      [
+        x.word,
+        x.wrong
+      ],
       x.word
     );
   }
@@ -1217,17 +1455,23 @@ function render(){
   if(level===3){
 
     document
-      .getElementById("instruction")
-      .textContent=
-        "🔎 Lovec chýb";
+    .getElementById(
+      "instruction"
+    )
+    .textContent=
+      "🔎 Lovec chýb";
 
     document
-      .getElementById("question")
-      .textContent=
-        "Ktorá veta je správna?";
+    .getElementById(
+      "question"
+    )
+    .textContent=
+      "Ktorá veta je správna?";
 
     let good=
-      shuffle(x.sentences)[0];
+      shuffle(
+        x.sentences
+      )[0];
 
     let bad=
       good.replace(
@@ -1245,7 +1489,10 @@ function render(){
     }
 
     createAnswers(
-      [good,bad],
+      [
+        good,
+        bad
+      ],
       good
     );
   }
@@ -1256,30 +1503,82 @@ function render(){
    ODPOVEDE
 ===================================================== */
 
-function createAnswers(options,correct){
+function createAnswers(
+  options,
+  correct
+){
 
   let box=
-    document.getElementById("answers");
+    document.getElementById(
+      "answers"
+    );
 
   box.innerHTML="";
 
-  shuffle(options)
-    .forEach(option=>{
+  const mixed=
+    shuffle(
+      options
+    );
+
+  mixed.forEach(
+    (option,index)=>{
 
       let b=
-        document.createElement("button");
-
-      b.className="answer";
-
-      b.textContent=option;
-
-      b.onclick=
-        ()=>check(
-          option===correct
+        document
+        .createElement(
+          "button"
         );
 
+      b.className=
+        "answer";
+
+      b.textContent=
+        option;
+
+      b.onclick=
+        ()=>{
+
+          selectedAnswerIndex=
+            index;
+
+          updateKeyboardSelection();
+
+          check(
+            option===correct
+          );
+        };
+
       box.appendChild(b);
-    });
+    }
+  );
+
+  updateKeyboardSelection();
+}
+
+
+function updateKeyboardSelection(){
+
+  const buttons=[
+    ...document.querySelectorAll(
+      ".answer"
+    )
+  ];
+
+  buttons.forEach(
+    (button,index)=>{
+
+      button
+      .classList
+      .toggle(
+
+        "keyboardSelected",
+
+        index===
+        selectedAnswerIndex &&
+        !button.disabled
+      );
+    }
+  );
 }
 
 
@@ -1289,20 +1588,27 @@ function createAnswers(options,correct){
 
 function check(ok){
 
-  if(locked)return;
+  if(locked){
+    return;
+  }
 
   locked=true;
 
-  let x=questions[current];
+  let x=
+    questions[current];
 
   let f=
-    document.getElementById("feedback");
+    document.getElementById(
+      "feedback"
+    );
 
   if(ok){
 
     score++;
 
-    correctAnswer(x.id);
+    correctAnswer(
+      x.id
+    );
 
     f.className=
       "feedback good";
@@ -1310,49 +1616,55 @@ function check(ok){
     f.innerHTML=
       "🎉 <b>Výborne!</b> Správna odpoveď.";
 
-  }else{
+  }
+  else{
 
-    wrongAnswer(x.id);
+    wrongAnswer(
+      x.id
+    );
 
     f.className=
       "feedback bad";
 
-    /*
-       Pri významových dvojiciach nehovoríme,
-       že druhé slovo je nesprávne všeobecne.
-    */
-
     if(x.meaningPair){
 
       f.innerHTML=
-        "💡 <b>Ešte nie.</b> Do tejto vety patrí <b>"
-        +x.word+
+        "❌ <b>Nesprávne.</b> Do tejto vety patrí <b>"+
+        x.word+
         "</b>.";
 
-    }else{
+    }
+    else{
 
       f.innerHTML=
-        "💡 <b>Ešte nie.</b> Správne je <b>"
-        +x.word+
+        "❌ <b>Nesprávne.</b> Správne je <b>"+
+        x.word+
         "</b>.";
     }
   }
 
   document
-    .getElementById("points")
-    .textContent=
-      score;
+  .getElementById(
+    "points"
+  )
+  .textContent=
+    score;
 
   document
-    .querySelectorAll(".answer")
-    .forEach(
-      b=>b.disabled=true
-    );
+  .querySelectorAll(
+    ".answer"
+  )
+  .forEach(
+    b=>
+      b.disabled=true
+  );
 
   document
-    .getElementById("next")
-    .classList
-    .remove("hidden");
+  .getElementById(
+    "next"
+  )
+  .classList
+  .remove("hidden");
 }
 
 
@@ -1366,36 +1678,116 @@ function nextQuestion(){
 
   render();
 
-  window.scrollTo(0,0);
+  window.scrollTo(
+    0,
+    0
+  );
 }
 
 
 /* =====================================================
-   ENTER = ĎALEJ
+   ŠÍPKY + ENTER
 ===================================================== */
 
-document.addEventListener(
+document
+.addEventListener(
   "keydown",
   function(event){
 
-    if(event.key==="Enter"){
+    const game=
+      document.getElementById(
+        "game"
+      );
 
-      const nextButton=
-        document.getElementById("next");
+    if(
+      !game ||
+      game.classList.contains(
+        "hidden"
+      )
+    ){
+      return;
+    }
 
-      const game=
-        document.getElementById("game");
+    const buttons=[
+      ...document
+      .querySelectorAll(
+        ".answer"
+      )
+    ];
+
+    if(
+      locked &&
+      event.key==="Enter"
+    ){
+
+      event.preventDefault();
+
+      nextQuestion();
+
+      return;
+    }
+
+    if(
+      locked ||
+      !buttons.length
+    ){
+      return;
+    }
+
+    if(
+      event.key==="ArrowRight" ||
+      event.key==="ArrowDown"
+    ){
+
+      event.preventDefault();
+
+      selectedAnswerIndex=
+        (
+          selectedAnswerIndex+1
+        )%
+        buttons.length;
+
+      updateKeyboardSelection();
+
+      return;
+    }
+
+    if(
+      event.key==="ArrowLeft" ||
+      event.key==="ArrowUp"
+    ){
+
+      event.preventDefault();
+
+      selectedAnswerIndex=
+        (
+          selectedAnswerIndex-1+
+          buttons.length
+        )%
+        buttons.length;
+
+      updateKeyboardSelection();
+
+      return;
+    }
+
+    if(
+      event.key==="Enter"
+    ){
+
+      event.preventDefault();
+
+      const selected=
+        buttons[
+          selectedAnswerIndex
+        ];
 
       if(
-        nextButton &&
-        game &&
-        !nextButton.classList.contains("hidden") &&
-        !game.classList.contains("hidden")
+        selected &&
+        !selected.disabled
       ){
 
-        event.preventDefault();
-
-        nextQuestion();
+        selected.click();
       }
     }
   }
@@ -1409,34 +1801,40 @@ document.addEventListener(
 function finish(){
 
   document
-    .getElementById("finalScore")
-    .textContent=
-      score+
-      " / "+
-      questions.length;
+  .getElementById(
+    "finalScore"
+  )
+  .textContent=
+    score+
+    " / "+
+    questions.length;
 
   let p=
     score /
     questions.length;
 
   document
-    .getElementById("finalMessage")
-    .textContent=
+  .getElementById(
+    "finalMessage"
+  )
+  .textContent=
 
-      p===1
-      ? "Perfektné! Bez chyby. 🌟"
+    p===1
+    ? "Perfektné! Bez chyby. 🌟"
 
-      : p>=.8
-      ? "Výborne! 🚀"
+    : p>=.8
+    ? "Výborne! 🚀"
 
-      : p>=.6
-      ? "Pekná práca. 💪"
+    : p>=.6
+    ? "Pekná práca. 💪"
 
-      : "Skús ešte jeden tréning. 🌱";
+    : "Skús ešte jeden tréning. 🌱";
 
   updateMistakes();
 
-  show("finish");
+  show(
+    "finish"
+  );
 }
 
 
